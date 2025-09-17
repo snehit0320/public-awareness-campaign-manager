@@ -1,0 +1,5 @@
+/* Minimal tweaks for cards/tiles */
+.stat-card { min-height: 100px; }
+.template-tile { display:inline-flex; gap:.5rem; align-items:center; border:1px dashed #ced4da; padding:.5rem .75rem; border-radius:.5rem; cursor:pointer; }
+.template-tile input { margin-right:.25rem; }
+.template-card img { object-fit: cover; height: 160px; }
