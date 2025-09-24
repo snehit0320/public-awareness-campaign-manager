@@ -11,17 +11,17 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/campaign")
+    @GetMapping("/home/campaign")
     public String campaigns() {
         return "campaign";
     }
 
-    @GetMapping("/campaigns/create")
+    @GetMapping("/create")
     public String create() {
-        return "campaign-create";
+        return "createCampaign";
     }
 
-    @GetMapping("/segments")
+    @GetMapping("/home/segments")
     public String segments() {
         return "segments";
     }

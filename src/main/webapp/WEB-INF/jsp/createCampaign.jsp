@@ -12,7 +12,7 @@
 <div class="container py-4">
   <h1 class="h4 mb-3">Create Campaign</h1>
 
-  <form action="/campaigns/create" method="post" enctype="multipart/form-data" class="card shadow-sm">
+  <form action="/campaign/create" method="post" enctype="multipart/form-data" class="card shadow-sm">
     <div class="card-body">
       <div class="row g-3">
         <div class="col-md-6">
@@ -29,11 +29,13 @@
           <textarea name="message" class="form-control" rows="3" placeholder="Short message for your audience"></textarea>
         </div>
 
-        <div class="col-md-6">
-          <label class="form-label">Upload Media (images/video/pdf)</label>
-          <input class="form-control" type="file" name="media" multiple>
-          <div class="form-text">You can attach posters, flyers, or short clips.</div>
+        <div class="mb-3">
+          <label class="form-label">Upload Media (image/video/pdf)</label>
+          <input class="form-control" type="file" name="mediaFile">
         </div>
+
+
+
 
         <div class="col-md-6">
           <label class="form-label">Channels</label>
@@ -55,10 +57,11 @@
           <label class="form-label">Target Audience</label>
           <div class="input-group">
             <input type="text" class="form-control" name="segmentSummary"
-                   placeholder="e.g., Coastal wards, age 18–60">
-            <a href="/segments" class="btn btn-outline-secondary">Open Audience Builder</a>
+                   value="${selectedSegment}" placeholder="Select segment..." readonly>
+            <a href="/segments?redirect=/campaign/create" class="btn btn-outline-secondary">Open Audience Builder</a>
           </div>
         </div>
+
 
         <div class="col-md-6">
           <label class="form-label">Schedule</label>
@@ -96,7 +99,7 @@
       </div>
     </div>
     <div class="card-footer d-flex justify-content-end gap-2">
-      <a href="/campaigns" class="btn btn-outline-secondary">Cancel</a>
+      <a href="/campaign" class="btn btn-outline-secondary">Cancel</a>
       <button class="btn btn-primary" type="submit">Save Campaign</button>
     </div>
   </form>

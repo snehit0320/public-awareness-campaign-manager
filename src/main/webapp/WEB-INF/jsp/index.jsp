@@ -13,7 +13,7 @@
 <div class="container py-4">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h1 class="h4 m-0">Dashboard</h1>
-    <a class="btn btn-primary" href="/campaigns/create">+ New Campaign</a>
+    <a class="btn btn-primary" href="/campaign/create">+ New Campaign</a>
   </div>
 
   <div class="row g-3">
